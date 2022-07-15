@@ -6,8 +6,7 @@ namespace la_mia_pizzeria_static.Controllers
 {
     public class PizzaController : Controller
     {
-        public IActionResult Index()
-        {
+        public IActionResult Index(){
             List<Pizza> pizze = new PizzaContext().Pizzas.ToList();
             ViewData["title"] = "Menù pizze";
             return View(pizze);
